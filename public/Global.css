@@ -1,0 +1,36 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+.vehicle-card {
+  width: 30vh;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  color: #000;
+  text-align: start;
+}
+
+.market-time-header {
+  color: #000;
+  background-color: rgb(230, 234, 238);
+  margin: 0;
+  padding: 0.75rem 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding-left: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+button.add-parking-lot {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}

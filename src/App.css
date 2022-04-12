@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+div.vehicle-card {
+  margin: 0 3rem;
+}
+
+.parking-lot-button {
+  text-align: right;
+  padding: 1rem 3rem;
+  background-color: #f7f7f7;
+}
