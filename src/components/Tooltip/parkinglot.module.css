@@ -8,9 +8,9 @@
   color: #000;
   background-color: #fff;
   height: 100vh;
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  right: 0;
+  right: 0; */
   border: 1px solid black;
   margin: 0.25rem;
   width: 25vw;

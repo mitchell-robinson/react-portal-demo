@@ -2,7 +2,7 @@
   font-family: "Poppins", sans-serif;
 }
 .vehicle-card {
-  width: 30vh;
+  width: 30vw;
   border: 1px solid gray;
   border-radius: 0.5rem;
   background-color: #fff;

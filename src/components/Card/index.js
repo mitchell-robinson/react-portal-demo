@@ -1,4 +1,9 @@
+import Tooltip from "../Tooltip";
+import { useState } from "react";
+
 function Card({ vehicle, addToParkingLot }) {
+  const [showTooltip, setShowTooltip] = useState(false);
+
   return (
     <div className="vehicle-card">
       <p className="market-time-header">
@@ -19,6 +24,7 @@ function Card({ vehicle, addToParkingLot }) {
           <li>Advertised Price: {vehicle.price}</li>
           <li>TotalPrice: {vehicle.totalprice}</li>
           <li>Location: {vehicle.location}</li>
+          <li>Note: {vehicle.note}</li>
         </ul>
       </div>
       <button
@@ -27,6 +33,8 @@ function Card({ vehicle, addToParkingLot }) {
       >
         Add To Parking Lot
       </button>
+      <button onClick={() => setShowTooltip(true)}>Header Message</button>
+      <Tooltip showTooltip={showTooltip} />
     </div>
   );
 }

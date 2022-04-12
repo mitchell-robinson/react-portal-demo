@@ -21,3 +21,7 @@ div.vehicle-card {
   padding: 1rem 3rem;
   background-color: #f7f7f7;
 }
+
+#header {
+  border: 1px solid black;
+}

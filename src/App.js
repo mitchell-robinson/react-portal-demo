@@ -4,18 +4,6 @@ import ParkingLot from "./components/ParkingLot";
 import { useState } from "react";
 
 function App() {
-  const [lotOpen, setLotOpen] = useState(false);
-  const [newPLVehicle, setNewPLVehicle] = useState();
-
-  const addToParkingLot = (vehicle) => {
-    setLotOpen(true);
-    setNewPLVehicle(vehicle);
-  };
-
-  const closeParkingLot = () => {
-    setLotOpen(false);
-  };
-
   // Some sample data that would be in the parking lot db
   const vehicles = [
     {
@@ -30,6 +18,7 @@ function App() {
       location: "San Antonio, TX",
       imgsrc: "./truck.png",
       daysonmarket: "12",
+      note: "",
     },
     {
       condition: "Used",
@@ -43,16 +32,33 @@ function App() {
       location: "Boerne, TX",
       imgsrc: "./truck2.png",
       daysonmarket: "33",
+      note: "",
     },
   ];
 
+  const [lotOpen, setLotOpen] = useState(false);
+  const [plVehicle, setPlVehicle] = useState(vehicles);
+  const [newPLVehicle, setNewPLVehicle] = useState();
+
+  const addToParkingLot = (vehicle) => {
+    setLotOpen(true);
+    setNewPLVehicle(vehicle);
+  };
+
+  const closeParkingLot = () => {
+    setLotOpen(false);
+  };
+
   return (
     <div className="App">
-      <div className="parking-lot-button">
-        <button>Parking Lot</button>
+      <div id="header">
+        <div className="parking-lot-button">
+          <button onClick={() => setLotOpen(true)}>Parking Lot</button>
+        </div>
       </div>
+
       <header className="App-header">
-        {vehicles.map((veh, index) => {
+        {plVehicle.map((veh, index) => {
           return (
             <Card key={index} vehicle={veh} addToParkingLot={addToParkingLot} />
           );
